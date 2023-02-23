@@ -1,0 +1,484 @@
+Acer-i5-831@acer-i5-831 MINGW64 ~ (master)
+$ cd c:
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ mkdir git
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ cd git
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git
+$ nano main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git
+$ git add main
+fatal: not a git repository (or any of the parent directories): .git
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git
+$ git init
+Initialized empty Git repository in C:/git/.git/
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ ls -a
+./  ../  .git/  main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ git add main
+warning: in the working copy of 'main', LF will be replaced by CRLF the next time Git touches it
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ git commit -m "initial commit"
+[master (root-commit) 64a8856] initial commit
+ 1 file changed, 6 insertions(+)
+ create mode 100644 main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ git log
+commit 64a885682af23bcd8b258cf17b1405d8146ec99b (HEAD -> master)
+Author: anmol <tanish12@gmail.com>
+Date:   Thu Feb 23 09:33:04 2023 +0530
+
+    initial commit
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ git branch
+* master
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ git checkout ios
+error: pathspec 'ios' did not match any file(s) known to git
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ git branch ios
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (master)
+$ git checkout ios
+Switched to branch 'ios'
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ nano main2
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git add main2
+warning: in the working copy of 'main2', LF will be replaced by CRLF the next time Git touches it
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git commit -m "initial commit"
+[ios 4a66fc9] initial commit
+ 1 file changed, 18 insertions(+)
+ create mode 100644 main2
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+git: 'lg' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git lgo
+git: 'lgo' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git log
+commit 4a66fc9aaaf565daba176dbc28c57643e7ce3067 (HEAD -> ios)
+Author: anmol <tanish12@gmail.com>
+Date:   Thu Feb 23 09:34:34 2023 +0530
+
+    initial commit
+
+commit 64a885682af23bcd8b258cf17b1405d8146ec99b (master)
+Author: anmol <tanish12@gmail.com>
+Date:   Thu Feb 23 09:33:04 2023 +0530
+
+    initial commit
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config user.name "aryansba"
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config user.NAME "gitMain"
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config user.name
+gitMain
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git remote
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git remote add https://github.com/aryansba/odin.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git remote
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git clear
+git: 'clear' is not a git command. See 'git --help'.
+
+The most similar command is
+        clean
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ clean
+bash: clean: command not found
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git clean
+fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config --global user.name "aryansba"
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config --global user.name
+aryansba
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config --global user.name "VinitVikas"
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config --global user.email "vikasvinit143@gmail.com"
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config --global user.email
+vikasvinit143@gmail.com
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git config --global user.name
+VinitVikas
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git remote
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ git remote add https://github.com/VinitVikas/class1.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/git (ios)
+$ cd ..
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ mkdir clone1
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ cd clone1/
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1
+$ git clone https://github.com/VinitVikas/class1.git
+Cloning into 'class1'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (5/5), done.
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1
+$ ls -a
+./  ../  class1/
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1
+$ cd class1
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git remote
+origin
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git remote -v
+origin  https://github.com/VinitVikas/class1.git (fetch)
+origin  https://github.com/VinitVikas/class1.git (push)
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ touch main.txt
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git add .
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git commit -m "main.txt added"
+[main e7c104b] main.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.txt
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git log
+commit e7c104bf063dc999361d7ab4fb44147d6bc0a07e (HEAD -> main)
+Author: VinitVikas <vikasvinit143@gmail.com>
+Date:   Thu Feb 23 09:54:30 2023 +0530
+
+    main.txt added
+
+commit 925d65a1374bd18713d421367ed9d47de169c3bb (origin/main, origin/HEAD)
+Author: Vinit Vikas <75903612+VinitVikas@users.noreply.github.com>
+Date:   Thu Feb 23 09:41:03 2023 +0530
+
+    Delete README.md
+
+commit 8ad774eca8a281d6e79e8abaccd08925ae2bda6b
+Author: Vinit Vikas <75903612+VinitVikas@users.noreply.github.com>
+Date:   Wed Jan 25 10:24:53 2023 +0530
+
+    Initial commit
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/VinitVikas/class1.git'
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git branch
+* main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git push origin main
+
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Writing objects: 100% (3/3), 245 bytes | 245.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VinitVikas/class1.git
+   925d65a..e7c104b  main -> main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ https://github.com/VinitVikas/class1.git^C
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git branch
+* main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ git clone https://github.com/VinitVikas/clone2.git
+Cloning into 'clone2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ ls -a
+./  ../  .git/  clone2/  main.txt
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ cd clone2/
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1/clone2 (main)
+$  git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1/clone2 (main)
+$ \cd ..
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1/class1 (main)
+$ cd ..
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/clone1
+$ cd ..
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ git clone https://github.com/VinitVikas/clone2.git
+Cloning into 'clone2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ ls -a
+'!qhlogs.doc'     ../          'Documents and Settings'@   OneDriveTemp/           Recovery/                    'Windows.old(1)'/   clone2/      hiberfil.sys   swapfile.sys
+'$GetCurrent'/    AHCache/      DumpStack.log.tmp          PerfLogs/              'System Volume Information'/   accaconf.ini       dsbrowser/   logs/
+'$Recycle.Bin'/   BOOTNXT       Intel/                    'Program Files'/         TurboC++/                     admn.log           eclipse/     oraclexe/
+'$WinREAgent'/    Config.Msi/   MSOCache/                 'Program Files (x86)'/   Users/                        bootmgr            git/         pagefile.sys
+ ./               DRV/          OSRSS/                     ProgramData/            Windows/                      clone1/            hehehehe/    sebclient/
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ mkdir main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c
+$ cd main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main
+$ git clone https://github.com/VinitVikas/clone2.git
+Cloning into 'clone2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main
+$ ls -a
+./  ../  clone2/
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main
+$ cd clone2/
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ ls
+README.md
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git branch
+* main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git branch -r
+  origin/HEAD -> origin/main
+  origin/ios
+  origin/main
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ ls
+README.md
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git remote
+origin
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git fetch origin
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 1.26 KiB | 3.00 KiB/s, done.
+From https://github.com/VinitVikas/clone2
+   244863a..f303313  main       -> origin/main
+   244863a..39dafe4  ios        -> origin/ios
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ ls
+README.md
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 (main)
+$ git checkout origin/main
+Note: switching to 'origin/main'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at f303313 Create file1.txt
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 ((f303313...))
+$ ls
+README.md  file1.txt
+
+Acer-i5-831@acer-i5-831 MINGW64 /c/main/clone2 ((f303313...))
+$
